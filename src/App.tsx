@@ -1,16 +1,18 @@
 import { Heart } from 'lucide-react'
+import { HeartCursorTrail } from './components/HeartCursorTrail'
 
 function App() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-rose-200 flex flex-col items-center justify-center p-6 text-center select-none">
-      <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl max-w-md w-full border border-pink-200 flex flex-col items-center">
-        <Heart className="w-12 h-12 text-rose-500 fill-rose-500 animate-bounce mb-4" />
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight mb-2">
-          Happy Anniversary! ❤️
-        </h1>
-        <p className="text-gray-600">
-          Tailwind & Lucide are live! Ready to build the question journey.
+    <main className='relative min-h-screen bg-[#030305] text-white flex flex-col items-center justify-center overflow-hidden cursor-crosshair'>
+      <HeartCursorTrail />
+      <div className='z-10 text-center px-6'>
+        <p className='text-xs font-mono uppercase tracking-[0.3em] text-[#00f0ff] mb-3'>
+          [NEUTRAL LINK // ACTIVE]
         </p>
+        <h1 className='text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-[#00f0ff] to-[#ff007f]
+        bg-clip-text text-transparent'>FOREVER Synchronized</h1>
+        <p className="mt-4 text-sm font-mono text-gray-400">Move your mouse around to test the heart trail!</p>
+
       </div>
     </main>
   )
